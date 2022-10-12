@@ -162,8 +162,13 @@ def train(model, train_data, vali_data, criterion, optimizer, scheduler):
 
 if __name__ == '__main__':
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    print(colored('=' * 15, 'blue'))
     print(colored(f'Using Device : {device}', 'blue'))
-    
+    print(colored(f'Batch Size : {BATCH_SIZE}', 'blue'))
+    print(colored(f'Total Epochs : {EPOCHS}', 'blue'))
+    print(colored(f'Early Stopping : {EARLY_STOP}', 'blue'))
+    print(colored('=' * 15, 'blue'), end="\n\n")
+
     utils.set_seeds(63)
     
     logging.basicConfig(level=logging.INFO, filename='./log/log.txt', filemode='w',

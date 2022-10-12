@@ -1,10 +1,18 @@
-BATCH_SIZE = 64
-EPOCHS = 50
-NUM_WORKERS = 14
+# model config
 NUM_CLASS = 33
 
-MODEL_PATH = './ckpt/'
+# data confing
+DATA_ROOT = '../'
+
+# training config
+EPOCHS = 50
+BATCH_SIZE = 64
+NUM_WORKERS = 14
 LEARNING_RATE = 3e-4
+EARLY_STOP = 5
+MODEL_PATH = './ckpt/'
+
+# optimizer config
 DECAY = 5e-4
 T_MAX = 300
-EARLY_STOP = 5
+

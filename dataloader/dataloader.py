@@ -3,6 +3,7 @@ from PIL import Image
 from torchvision import transforms
 from torch.utils.data import Dataset
 
+from config import *
 ## Dataset
 def csv_mapping():
     dic = {}
@@ -52,7 +53,7 @@ class CropsDataset(Dataset):
         self.img_info = csv_mapping()
         
     def __getitem__(self, idx):
-        img = Image.open(f'../{self.filenames[idx]}').convert('RGB')
+        img = Image.open(f'{DATA_ROOT}{self.filenames[idx]}').convert('RGB')
         img_name = self.filenames[idx].replace('.jpg', '').split('/')[-1]
         data = self.img_info[img_name]
         data.update({
