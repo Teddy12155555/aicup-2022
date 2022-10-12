@@ -1,0 +1,8 @@
+torch
+torchvision
+numpy
+tqdm
+pandas
+tqdm
+termcolor
+efficientnet_pytorch
